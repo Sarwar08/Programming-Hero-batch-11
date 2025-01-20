@@ -29,7 +29,7 @@
 #hero {
     /* background-color: tomato;
     background-image: url(/assets/hero-bg.png); */
-    background: linear-gradient(0.00deg, rgb(9, 9, 9) 2.884%,rgba(16, 16, 16, 0) 101.034%), url(/assets/hero-bg.png);
+    background: linear-gradient(0.00deg, rgb(9, 9, 9) 2.884%,rgba(16, 16, 16, 0) 101.034%), url(../assets/hero-bg.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -235,7 +235,7 @@ margin-bottom: 20px;
     border: 1px solid black;
     /* background-image: url(/assets/foods.png); */
     /* background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.9)), url(/assets/foods.png); */
-    background: linear-gradient(rgba(217, 0, 255, 0.8), rgba(234, 0, 255, 0.9), rgba(251, 227, 222, 0.9)), url(/assets/social-bg.png);
+    background: linear-gradient(rgba(217, 0, 255, 0.8), rgba(234, 0, 255, 0.9), rgba(251, 227, 222, 0.9)), url(../assets/social-bg.png);
     /* opacity: 0.3; */
     height: 450px;
     background-position: center;
