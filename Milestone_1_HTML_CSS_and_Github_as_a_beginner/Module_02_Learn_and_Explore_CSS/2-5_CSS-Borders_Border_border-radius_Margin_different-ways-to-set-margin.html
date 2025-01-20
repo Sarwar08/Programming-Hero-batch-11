@@ -1,0 +1,54 @@
+
+<!-- 2-5_CSS-Borders_Border_border-radius_Margin_different-ways-to-set-margin 
+
+
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Developer Blogs</title>
+    <style>
+        *{
+            margin: 0;
+        }
+
+        .body{
+            padding: 2rem;
+        }
+
+        .blog{
+            background-color: aquamarine;
+            margin-bottom: 0.5rem;
+            padding: 0.5rem;
+            border: 2px solid tomato;
+            border-top: 20px solid salmon;
+            border-radius: 5px;
+            border-bottom: none;
+
+            /* margin: 20px; // all side */
+            /* margin: 20px 10px; // TB LR */
+            /* margin: 20px 10px 30px; // T LR B */
+            /* margin: 20px 2px 3px 4px; // T R B L */
+        }
+    </style>
+</head>
+<body class="body">
+    <div class="blog">
+        <h3>My First Blog</h3>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem repudiandae ex distinctio mollitia doloremque a non numquam labore, repellendus voluptas aut deserunt eius ea in accusamus. Odio ex expedita possimus?</p>
+    </div>
+
+    <div class="blog">
+        <h3>My Second Blog</h3>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem repudiandae ex distinctio mollitia doloremque a non numquam labore, repellendus voluptas aut deserunt eius ea in accusamus. Odio ex expedita possimus?</p>
+    </div>
+    <div class="blog">
+        <h3>My Third Blog</h3>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem repudiandae ex distinctio mollitia doloremque a non numquam labore, repellendus voluptas aut deserunt eius ea in accusamus. Odio ex expedita possimus?</p>
+    </div>
+</body>
+</html>

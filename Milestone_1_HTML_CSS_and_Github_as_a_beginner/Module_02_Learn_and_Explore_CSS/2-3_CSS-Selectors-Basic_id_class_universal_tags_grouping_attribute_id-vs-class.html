@@ -1,0 +1,58 @@
+
+<!-- 2-3_CSS-Selectors-Basic_id_class_universal_tags_grouping_attribute_id-vs-class 
+ 
+CSS Selectors: 
+    class       -> .
+    id          -> #
+    element     -> h1{} p{}
+    universal   -> * *{margin: 0; padding: 0; border: 1px solid black; }
+    Grouping selector -> h1,p{} | a,button{}
+    attribute selectors
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Basic CSS</title>
+
+    <style>
+        li{
+            color: indianred;
+        }
+
+        p{
+            background-color: aquamarine;
+            width: 50%;
+        }
+
+        #short{
+            color: red;
+            text-align: center;
+        }
+
+        #embedded{
+            font-size: x-large;
+        }
+
+        .player{
+            text-align: right;
+        }
+
+    </style>
+</head>
+<body style="padding: 2rem">
+    <h3 style="color: violet; background-color: brown;">Learning Basic CSS</h3>
+    <p id="short">CSS meaning: Cascading Style Steet</p>
+    <p class="player">CSS meaning: Cascading Style Steet</p>
+    <p>CSS meaning: Cascading Style Steet</p>
+    <ul style="margin-left: 2rem;">
+        <li>Inline</li>
+        <li id="embedded">Internal</li>
+        <li>External</li>
+    </ul>
+    
+</body>
+</html>

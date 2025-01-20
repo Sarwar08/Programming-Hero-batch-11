@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form for pitha ghor</title>
+    <style>
+        body{
+            padding: 2rem;
+        }
+
+        label{
+            display: block;
+            margin-bottom: 5px;
+            padding: 4px;
+        }
+
+        fieldset{
+            margin-top: 20px;
+            border: none;
+        }
+
+        legend{
+            border-bottom: 2px solid tomato;
+            font-weight: 800;
+            margin-bottom: 5px;
+        }
+    </style>
+    <link rel="stylesheet" href="styles/4-5_nav_blog.css">
+</head>
+<body >
+    <header>
+        <nav>
+            <ul>
+                <li><a href="./4-5_Navigation_Simple-navbar_and_internal-navigation_among_files.html">4-5_Home</a></li>
+                <li><a href="./4-1_HTML5_vs_HTML_audio_video_youtube-video_embed-iframe.html">Media</a></li>
+                <li><a href="./4-2_Explore-HTML_nav_main_header_footer_section_article_time.html">HTML</a></li>
+                <li><a href="./4-3_HTML-Form_label_fieldset_legend_radio_checkbox_textarea_reset_submit.html">Form</a></li>
+                <li><a href="./4-4_HTML-Table_table_tr_th_td_caption_colspan_thead_tbody_tfoot.html">Table</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Please Fill up the Form</h2>
+            <form>
+                <label for="name"> Your Name: 
+                    <input id="name" type="text" placeholder="Your Name">
+                </label>
+                <label for="email"> Your email: 
+                    <input id="email" type="email" placeholder="Your Email">
+                </label>
+                <label for="phone">Your Phone: 
+                    <input id="phone" type="text" placeholder="Your Phone number">
+                </label>
+
+                <fieldset class="fieldset">
+                    <legend>Pick One Pitha</legend>
+                    <label for="chitoy">
+                        <input type="radio" name="pitha" id="chitoy"> Chitoy
+                    </label>
+                    <label for="vapa">
+                        <input type="radio" name="pitha" id="vapa"> Vapa
+                    </label>
+                    <label for="puri">
+                        <input type="radio" name="pitha" id="puri"> Puri
+                    </label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Pick one or more vorta</legend>
+                    <label for="sorisa">
+                        <input type="checkbox" name="" id="sorisa"> Sorisa
+                    </label>
+                    <label for="shutki">
+                        <input type="checkbox" name="" id="shutki"> Shutki
+                    </label>
+                    <label for="chili">
+                        <input type="checkbox" id="chili"> Chili
+                    </label>
+
+                </fieldset>
+
+                <fieldset>
+                    <legend>Special Instruction</legend>
+                    <textarea name="" id="" cols="30" rows="3"></textarea>
+                </fieldset>
+
+                <input type="reset" value="Reset">
+                <input type="submit" value="Submit">
+
+            </form>
+        </section>
+    </main>
+
+    <footer>
+
+    </footer>
+    
+</body>
+</html>
