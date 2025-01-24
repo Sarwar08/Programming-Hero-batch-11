@@ -1,0 +1,95 @@
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #171717;
+    color: white;
+}
+
+.nav {
+    margin: 5px;
+    padding: 5px;
+    background-color: burlywood;
+    height: 40px;
+    width: 1024px;
+    display: flex;
+    position: sticky;
+    top: 0px;
+
+
+}
+
+.nav-item {
+    background-color: chocolate;
+    height: 20px;
+    width: 50px;
+    margin-left: 3px;
+}
+
+.header {
+    border: 2px solid tomato;
+    height: 800px;
+}
+
+.header-div {
+    background-color: coral;
+    width: 800px;
+    padding: 5px;
+}
+
+.dummy {
+    background-color: blanchedalmond;
+    width: 150px;
+    height: 150px;
+    margin: 9px;
+}
+
+.position {
+    /* position: absolute; */
+    left: 300px;
+    top: 30px;
+    /* position: fixed; */
+    position: sticky
+}
+
+.main {
+    border: 2px solid tomato;
+    height: 300px;
+}
+
+.footer {
+    border: 2px solid tomato;
+    height: 300px;
+}
+
+.btn {
+    padding: 7px 15px 1px;
+    font-size: 30px;
+    border-radius: 7px;
+    background-color: rgb(217, 27, 125);
+    color: white;
+    opacity: 0.2;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: rgb(217, 27, 125);
+    color: white;
+    opacity: 0.8;
+}
+
+.btn:active {
+    background-color: rgb(217, 27, 125);
+    color: white;
+    opacity: 1;
+}
+
+.footer a {
+    transition: 5s;
+}
