@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body style="background-color: #313131; color: white;">
+    <h1>Dom shikhi</h1>
+    <h1>Aro shikhi</h1>
+    <ul>
+        <li>abul</li>
+        <li>fbul</li>
+        <li>gbul</li>
+    </ul>
+    <script src="js/dom.js"></script>
+    <script>
+        const student = {
+            name: 'abul',
+            id: 11,
+            study: function (time){
+                console.log(time, 'study kore');
+            }
+        }
+
+        const liCollection = document.getElementsByTagName('li');
+        // console.log(liCollection);
+        for(const li of liCollection){
+            console.log(li);
+            // console.log(li.innerText);
+        }
+
+        /**
+        Option-1: document.getElementsByTagName('h1')
+        Option-2: document.getElementById('fruits-title')
+        Option-3: document.getElementsByClassName('important-places')
+        Option-3: document.querySelector('.important-places') // only first element 
+        Option-3: document.querySelectorAll('.important-places') // all element
+        // (use # or . in querySelector)
+
+        */
+        
+    </script>
+</body>
+</html>
