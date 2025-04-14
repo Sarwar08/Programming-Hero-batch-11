@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h2 id="title">Heading</h2>
+    <script>
+        // regular function
+        function add(a, b) {
+            return a + b;
+        }
+
+        const sum = function add2(a, b) {
+            return a + b;
+        }
+
+        console.log(add(2, 3));
+        console.log('variable sum func add2 (call sum(3,3)): ', sum(3, 3));
+
+        const sum2 = (a, b) => {
+            return num1 + num2;
+        }
+
+        // arrow function 
+        const addArrow = (a, b) => {
+            return a + b;
+        }
+
+        const addArrow1 = (a, b) => a + b; // if it is oneline function
+
+        console.log(addArrow(2, 4));
+
+        ///// More Arrow Function
+
+        /*console.log(arguments);
+            - It works in regular function
+            - It does not work in arrow function
+        */
+
+        /* 3 ways to write an arrow function
+            - empty paranthesis     -> const sum = () => console.log('no argument');
+            - No paranthesis used   -> const sum = a => a * a;
+            - paranthesis used      -> const sum = (a, b) => a + b;
+        */
+
+        // where to use arrow function 
+
+
+
+        if (document.getElementById('title').innerText === 'abul') {
+            document.getElementById('title').addEventListener('click', () => {
+                document.getElementById('title').innerText = 'Heading';
+            })
+        }
+        else {
+            document.getElementById('title').addEventListener('click', () => {
+                document.getElementById('title').innerText = 'abul';
+            })
+        }
+    </script>
+</body>
+
+</html>

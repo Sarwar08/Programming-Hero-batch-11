@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event delegate</title>
+    <style>
+        body{
+            background-color: #313131;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Explore the concept of Event Delegate</h1>
+    <!-- ol#item-list>li.item*6{my awosome item-$} -->
+    <ol id="item-list">
+        <li class="item">my awosome item-1</li>
+        <li class="item">my awosome item-2</li>
+        <li class="item">my awosome item-3</li>
+        <li class="item">my awosome item-4</li>
+        <li class="item">my awosome item-5</li>
+        <li class="item">my awosome item-6</li>
+    </ol>
+
+    <button id="btn-add-item">Add new item</button>
+
+    <script>
+        // const items = document.getElementsByClassName('item');
+        // console.log(items);
+        // for (const item of items){
+        //     // console.log(item);
+        //     item.addEventListener('click', function(event){
+        //         // console.log(event.target.innerText);
+        //         // console.log(event.target.parentNode);
+        //         event.target.parentNode.removeChild(event.target);
+        //     })
+        // }
+
+        document.getElementById('item-list')
+        .addEventListener('click', function(event){
+            // console.log(event.target);
+            event.target.parentNode.removeChild(event.target);
+        })
+
+
+        // add a new item
+        document.getElementById('btn-add-item')
+        .addEventListener('click', function(){
+            // console.log('btn ckkk');
+
+            // parent to get added
+            const ol = document.getElementById('item-list');
+
+            // new item
+            const li = document.createElement('li');
+            li.classList.add('item');
+            li.innerText = 'Brand new item added';
+
+            // add the item
+            ol.appendChild(li);
+        })
+        
+    </script>
+    
+</body>
+</html>

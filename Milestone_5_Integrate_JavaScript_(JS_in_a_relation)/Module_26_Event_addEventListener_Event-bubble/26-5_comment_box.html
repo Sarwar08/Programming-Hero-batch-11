@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment Box</title>
+    <style>
+        body{
+            background-color: #313131;
+            color: white;
+        }
+
+        .div-container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #comment-container{
+            border: 2px solid rebeccapurple;
+            border-radius: 10px;
+            padding: 5px 10px;
+            margin-bottom: 2rem;
+            max-width: 1280px;
+        }
+
+        .comment{
+            border: 2px solid rebeccapurple;
+            border-radius: 10px;
+            padding: 10px;
+        }
+
+        #text-box{
+            background-color: rebeccapurple;
+            color: white;
+            border-radius: 10px;
+            padding: 10px;
+            margin-bottom: 1rem;
+        }
+
+        #btn-post-comment{
+            background-color: rebeccapurple;
+            color: white;
+            border: none;
+            border-radius: 12px;
+            padding: 12px 18px;
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="div-container">
+        <div id="comment-container">
+            <p class="comment">
+            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
+    
+            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
+    
+            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
+            </p>
+        </div>
+    
+        <!-- <form action=""> -->
+            <textarea name="" id="text-box" cols="100" rows="15"></textarea>
+            <div>
+                <button id="btn-post-comment">Post</button>
+            </div>
+        <!-- </form> -->
+
+        <script>
+            // step-1: get the button and add event
+            document.getElementById('btn-post-comment')
+            .addEventListener('click', function(){
+                // console.log('button clik');
+                
+                // get the comment box and get the value
+                const commentBox = document.getElementById('text-box');
+                const newComment = commentBox.value;
+                // console.log(newComment);
+
+                // create an p element and add the newComment on it
+                const newEl = document.createElement('p');
+                newEl.classList.add('comment');
+                newEl.innerText = newComment;
+                // console.log(newEl);
+                
+                // get the parent node and add newEl on it
+                const parentNode = document.getElementById('comment-container');
+                // console.log(parentNode);
+                parentNode.appendChild(newEl);
+
+                // clean text box 
+                commentBox.value = '';
+                
+            })
+        </script>
+
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!-- 
+events are clicks, select, hover etc.
+     such as click event. 
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM events</title>
+</head>
+<body style="background-color: #313131; color: white;">
+
+    <h1>Dom doma dom dom</h1>
+    <!-- option-1 for click event handler -->
+    <button onclick="console.log(7)">Click Me</button>
+        <!-- on.. : onclick, onchange -->
+    
+    <br><br>
+    <!-- 26-2: Add onclick handler directly or via javascript -->
+     <!-- option-2 for click event handler -->
+
+    <button onclick="makeYellowgreen()">Make Yellowgreen</button>
+    <button onclick="makeSteelblue()">Make Steelblue</button>
+
+    <br><br>
+    <!-- option 3: get element by id and then set onclick  -->
+    <button id="btn-make-red">Make Red</button>
+
+    <br><br>
+    <!-- option 3: slight different -->
+    <button id="btn-make-purple" onclick="btnMakePurple">Make Purple</button>
+    
+    <br><br>
+    <!-- 26-3: Different ways to use addEventListener on a button -->
+    <!-- option 4: addEventListener -->
+    <button id="btn-make-green">Make Green</button>
+
+    <br><br>
+    <button id="btn-make-gold">Make Gold</button>
+
+    <br><br>
+    <!-- reset button -->
+     <button id="btn-reset">Reset</button>
+
+
+    <script>
+        console.log("internal file");
+
+        // function makeYellowgreen (){
+        //     document.body.style.backgroundColor = 'yellowgreen';
+        // }
+
+        // function makeSteelblue (){
+        //     document.body.style.backgroundColor = 'steelblue';
+        // }
+    </script>
+    <script src="./26-1.js"></script>
+</body>
+</html>
+

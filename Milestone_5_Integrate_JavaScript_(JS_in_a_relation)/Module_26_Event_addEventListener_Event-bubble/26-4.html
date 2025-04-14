@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handler</title>
+</head>
+<body style="background-color: #313131; color: white;">
+
+    <h1 id="title">Event Handler</h1>
+    <button id="btn-update-title">Update Title</button>
+
+    <button id="btn-reset">reset</button>
+    <br><br>
+    <!-- input text added -->
+     <p id="target-text">No name</p>
+     <input id="input-name" type="text" placeholder="Your name">
+     <br><br>
+     <button id="btn-update-text">Update</button>
+
+     <script>
+         document.getElementById('btn-update-text').addEventListener('click', function(){
+            // console.log('button clicked');
+            const inputValue = document.getElementById('input-name').value;
+            document.getElementById('target-text').innerText = inputValue;
+         })
+     </script>
+    <script src="./26-4.js"></script>
+</body>
+</html>

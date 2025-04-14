@@ -1,0 +1,30 @@
+
+.users-div {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+}
+
+.userDiv {
+    background-color: darkcyan;
+    padding: 10px;
+    /* margin-bottom: 10px; */
+    border-radius: 10px;
+    /* display: flex; */
+    /* justify-content: ; */
+    /* display: grid;
+    grid-template-columns: 1fr 1fr 1fr; */
+
+}
+
+.userDiv-p {
+    /* border: 1px solid white; */
+    /* border-radius: 20px; */
+    /* padding: 8px; */
+    /* margin-right: 5px; */
+    text-align: left;
+}
+
+.p-span {
+    font-weight: bold;
+}

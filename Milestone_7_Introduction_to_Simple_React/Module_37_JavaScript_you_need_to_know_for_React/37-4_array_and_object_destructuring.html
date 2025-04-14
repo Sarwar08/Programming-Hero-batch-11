@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array and Object Destructuring</title>
+</head>
+<body>
+
+    <script>
+        // const arr = ['abul', 'kabul', 'sora'];
+        // const [e1, e2, e3] = arr;
+        // console.log(e1, e2, e3);
+
+        const person = {
+            name: 'bala',
+            age: 10,
+            country: 'BD',
+            freinds: ['abul', 'kabul', 'sora']
+        }
+
+        const {age, country, freinds, name} = person;
+
+        console.log(age, country, freinds, name);
+
+        const [e1, e2, e3] = freinds;
+
+        console.log(e1, e2, e3);
+        
+        
+
+    </script>
+</body>
+</html>

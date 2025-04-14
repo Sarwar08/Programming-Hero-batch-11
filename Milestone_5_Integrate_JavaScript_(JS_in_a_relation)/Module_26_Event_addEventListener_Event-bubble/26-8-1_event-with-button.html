@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event with delete button</title>
+    <style>
+        body{
+            background-color:#313131;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        #item-list{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: rebeccapurple;
+            /* padding-top: 20px; */
+            margin-bottom: 5px;
+            
+        }
+
+        .item-container{
+            margin-bottom: 10px;
+            border: 2px solid white;
+            padding: 10px;
+            border-radius: 15px;
+            background-color: blueviolet;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .item{
+            /* margin-bottom: 10px;
+            border: 2px solid white;
+            padding: 10px;
+            border-radius: 15px;
+            background-color: blueviolet; */
+            list-style: none;
+        }
+
+        .btn-delete{
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 10px;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+
+        .text-area-container{
+            background-color: green;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 10px;
+        }
+
+        .text-box-area{
+            background-color: #323111;
+            margin-bottom: 10px;
+            color: white;
+            font-size: 1rem;
+        }
+
+        .btn-add{
+            background-color: goldenrod;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 10px;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="item-list">
+        <h2>List Area</h2>
+        <div id="" class="item-container">
+            <li class="item">i am a item  </li>
+            <button class="btn-delete">Delete</button>
+        </div>
+        <div id="" class="item-container">
+            <li class="item">i am a item </li>
+            <button class="btn-delete">Delete</button>
+        </div>
+    </div>
+
+    <div class="text-area-container">
+        <h2>Writing Area</h2>
+        <textarea name="" id="text-box"  class="text-box-area" cols="40" rows="5"></textarea>
+        <button id="btn-add" 
+        class="btn-add">Add new list</button>
+    </div>
+
+    <script>
+        // get the delete button
+
+        // document.getElementById('btn-del-1').addEventListener('click', function(event){
+            // event.target.parentNode.parentNode.removeChild(event.target.parentNode);
+            // console.log(event.target.parentNode.childNodes);
+            
+        // })
+
+        document.getElementById('item-list')
+        .addEventListener('click', function(event){
+            console.log(event.target.innerText);
+            if (event.target.innerText === 'Delete'){
+                console.log(event.target.parentNode.parentNode);
+                
+                event.target.parentNode.parentNode.removeChild(event.target.parentNode);
+            }
+            else{
+                'not matched';
+            }
+        })
+
+        
+
+        document.getElementById('btn-add').addEventListener('click', function(){
+            // get the text box
+            const textBox = document.getElementById('text-box');
+            const textBoxValue = textBox.value;
+
+            const createLiDiv = document.createElement('div');
+            createLiDiv.classList.add('item-container');
+
+            const createLi = document.createElement('li');
+            createLi.innerText = textBoxValue;
+            createLi.classList.add('item');
+
+
+            const createDelButton = document.createElement('button');
+            createDelButton.innerText = 'Delete';
+            createDelButton.classList.add('btn-delete');
+
+            
+            createLiDiv.appendChild(createLi);
+            createLiDiv.appendChild(createDelButton);
+
+            // get the parent o
+            const parentNode = document.getElementById('item-list');
+
+            parentNode.appendChild(createLiDiv);
+
+            // clean text area
+            textBox.value = '';
+        })
+        
+
+
+        
+    </script>
+    
+</body>
+</html>

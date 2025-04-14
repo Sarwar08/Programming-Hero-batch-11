@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Practice</title>
+</head>
+<body>
+    <div style="text-align: center;">
+        <input id="name" type="text">
+        <input id="quantity" type="text">
+        <button onclick="handleAddToCart()">Add to cart</button>
+    </div>
+
+    <ul id="lists"></ul>
+
+    <script>
+
+        const handleAddToCart = () => {
+            const productName = document.getElementById('name');
+            const productQuantity = document.getElementById('quantity');
+            const name = productName.value;
+            const quantity = productQuantity.value;
+            // console.log(name, quantity);
+            saveToLocalStorage(name, quantity);
+            // displayProductFromLocalStorage();
+            productName.value = "";
+            productQuantity.value = "";
+        }
+
+        const getProductFromLocalStorage = () => {
+            let cart = {};
+            const products = localStorage.getItem('cart');
+
+            if (products) {
+                cart = JSON.parse(products);
+            }
+
+            return cart;
+        }
+
+        const saveToLocalStorage = (name, quantity) => {
+            const cart = getProductFromLocalStorage();
+
+            cart[name] = quantity;
+
+            const cartStringified = JSON.stringify(cart);
+
+            localStorage.setItem('cart', cartStringified);
+        }
+
+        const displayProductFromLocalStorage = () => {
+            const products = getProductFromLocalStorage();
+      
+            const parentUl = document.getElementById('lists');
+            parentUl.innerHTML = "";
+            
+            for (const product in products) {
+                console.log(product);
+                console.log(products[product]);
+                displayInBrowser(product, products[product]);
+            }
+        }
+
+        const displayInBrowser = (name, quantity) => {
+            const parentUl = document.getElementById('lists');
+
+            const li = document.createElement('li');
+            li.innerText = `${name} : ${quantity}`;
+
+            parentUl.appendChild(li);
+        }
+
+        displayProductFromLocalStorage();
+
+        
+
+
+    </script>
+
+    
+</body>
+</html>

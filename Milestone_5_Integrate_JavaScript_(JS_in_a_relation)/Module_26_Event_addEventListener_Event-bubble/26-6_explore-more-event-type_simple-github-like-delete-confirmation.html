@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More Events</title>
+</head>
+<body style="background-color: black; color: white">
+    <button id="btn-mouse">Micky button</button>
+    <br><br>
+    <div id="parent-node">
+        <p id="delete-para">to delete me type 'delete'</p>
+        <input id="input-box" type="text" placeholder="type 'delete'">
+        <button id="btn-delete" disabled>Delete</button>
+    </div>
+    
+    <script>
+        // document.getElementById('btn-mouse').addEventListener('mouseenter', function(){
+        //     console.log('mouse entered');
+        // })
+
+        // document.getElementById('btn-mouse').addEventListener('mousemove', function(){
+        //     console.log('mouse entered');
+        // })
+
+        // document.getElementById('btn-mouse').addEventListener('mouseout', function(){
+        //     console.log('mouse entered');
+        // })
+
+        // 'focus', 'blur' 'keydown' 'keyup'
+
+        document.getElementById('input-box')
+        .addEventListener('keyup', function(e){
+            text = e.target.value;
+            console.log('user is typing: ', text);
+            const deleteButton = document.getElementById('btn-delete');
+
+            if (text === 'delete'){
+                deleteButton.removeAttribute('disabled');
+            }
+            else{
+                console.log('something else typed');
+                deleteButton.setAttribute('disabled', true);
+                // we can also use style.display = 'none';
+            }
+        })
+
+        document.getElementById('btn-delete').addEventListener('click', function(e){
+            console.log('btn clked'); 
+
+            // get the para
+            const deletePara = document.getElementById('delete-para');
+            console.log(deletePara);
+
+            // get the parent node 
+            const parentNode = document.getElementById('parent-node');
+
+            // delete the para
+            parentNode.removeChild(deletePara);
+        })
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <h1 id="fruits-first" class="some-class random abul kahir" style="color: red;">Fruits</h1>
+        <ul class="fruits">
+            <li class="fruit">Apple</li>
+            <li class="fruit">Banana</li>
+            <li class="fruit">Carrot</li>
+        </ul>
+    </section>
+    <section>
+        <h1 id="fruits-middle" class="some-class random abul kahir" style="color: red;">Fruits</h1>
+        <ul class="fruits">
+            <li class="fruit">Apple</li>
+            <li class="fruit">Banana</li>
+            <li class="fruit">Carrot</li>
+        </ul>
+    </section>
+    <section id="last">
+        <h1 id="fruits-last" class="some-class random abul kahir" style="color: red;">Fruits</h1>
+        <ul class="fruits">
+            <li class="fruit">Apple</li>
+            <li class="fruit">Banana</li>
+            <li class="fruit">Carrot</li>
+        </ul>
+    </section>
+
+    <script>
+        // document.getElementById('fruits-style').style.color = 'green';
+        // document.getElementById('fruits-style').style.textAlign = 'center';
+        // document.getElementById('fruits-style').style.backgroundColor = 'yellow';
+        
+        // const title = document.getElementById('fruits-style');
+        // console.log(title.getAttribute('id'));
+        // console.log(title.getAttribute('class'));
+        // console.log(title.classList.add('added-class'));
+        // console.log(title.classList.remove('some-class'));
+        // console.log(title.classList);
+        
+        // console.log(title.setAttribute('title', 'tooltip set by js'));
+
+        // console.log(document.getElementsByClassName('fruits')[0].innerHTML = '<h2>ABC wow DOM is changed</h2>' );
+
+        /* 25-6: */
+
+        const sections = document.querySelectorAll('section');
+        // console.log(sections);
+
+        for (const section of sections){
+            section.style.border = '2px solid steelblue';
+            section.style.marginBottom = '5px';
+            section.style.borderRadius = '15px';
+            section.style.paddingLeft = '7px';
+            section.style.backgroundColor = 'lightGray';
+        }
+        
+        
+        const lastContainer = document.getElementById('last');
+        lastContainer.style.backgroundColor = 'yellow';
+        
+        // console.log(lastContainer.childNodes[3].childNodes[1].previousSibling);
+        
+        const lastContainerUL = document.querySelector('#last ul');
+
+        // console.log(lastContainerUL);
+        
+
+        const newLi = document.createElement('li');
+        newLi.innerText = 'ami paragrapher text';
+        // console.log(newLi.innerText);
+        lastContainerUL.appendChild(newLi);
+
+        // console.log(lastContainerUL.parentNode.parentNode);
+        // console.log(lastContainerUL.parentNode.parentNode.parentNode);
+        // console.log(lastContainerUL.parentNode.parentNode.parentNode.parentNode);
+        // console.log(lastContainerUL.parentNode.parentNode.parentNode.parentNode.parentNode);
+        // console.log(lastContainerUL.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode);
+        
+        
+
+
+        
+
+        
+
+        
+         
+    </script>
+
+</body>
+</html>
