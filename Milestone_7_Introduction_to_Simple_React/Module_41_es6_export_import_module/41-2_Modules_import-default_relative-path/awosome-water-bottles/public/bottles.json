@@ -1,0 +1,44 @@
+
+[
+    {
+      "id": 1,
+      "type": "Glass",
+      "size": "500ml",
+      "color": "Clear",
+      "material": "Glass",
+      "brand": "Sparkling Springs",
+      "price": 2.50,
+      "quantity": 150
+    },
+    {
+      "id": 2,
+      "type": "Plastic",
+      "size": "1L",
+      "color": "Transparent",
+      "material": "Plastic",
+      "brand": "PureLife",
+      "price": 1.00,
+      "quantity": 200
+    },
+    {
+      "id": 3,
+      "type": "Aluminum",
+      "size": "330ml",
+      "color": "Silver",
+      "material": "Aluminum",
+      "brand": "Fizzy Cola",
+      "price": 1.75,
+      "quantity": 120
+    },
+    {
+      "id": 4,
+      "type": "Glass",
+      "size": "750ml",
+      "color": "Green",
+      "material": "Glass",
+      "brand": "Vino Vintage",
+      "price": 12.99,
+      "quantity": 80
+    }
+  ]
+  

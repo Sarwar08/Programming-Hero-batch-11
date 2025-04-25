@@ -1,0 +1,19 @@
+
+.bottles {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+    border: 1px solid tomato;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.bottle {
+    border: 1px solid blueviolet;
+    background-color: rebeccapurple;
+    padding: 20px;
+    padding-top: 5px;
+    border-radius: 10px;
+    line-height: 16px;
+}
