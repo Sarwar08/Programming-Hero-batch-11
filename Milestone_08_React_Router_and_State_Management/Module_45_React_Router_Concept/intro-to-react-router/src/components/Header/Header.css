@@ -1,0 +1,24 @@
+
+nav {
+    margin-bottom: 20px;
+}
+
+nav a {
+    padding: 5px;
+    color: wheat;
+    
+}
+
+nav a:hover {
+    color: #000;
+    background-color: wheat;
+}
+
+nav a.active {
+    color: black;
+    background-color: wheat;
+}
+
+
+
+

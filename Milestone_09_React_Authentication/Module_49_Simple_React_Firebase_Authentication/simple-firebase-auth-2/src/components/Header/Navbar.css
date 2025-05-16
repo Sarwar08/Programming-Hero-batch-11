@@ -1,0 +1,15 @@
+
+nav {
+    /* background-color: black;
+    padding: 2px;
+    border-radius: 20px; */
+}
+nav a {
+    margin-right: 20px;
+    color: rgba(255, 255, 255, 0.741);
+    padding: 4px 0;
+}
+
+nav a.active {
+    border-bottom: 2px solid salmon;
+}
