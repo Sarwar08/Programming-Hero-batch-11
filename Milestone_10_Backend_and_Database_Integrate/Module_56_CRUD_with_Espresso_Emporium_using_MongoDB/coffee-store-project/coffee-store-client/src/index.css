@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Rancho&display=swap');
+
+@import "tailwindcss";
+@plugin "daisyui";
+
+nav a.active {
+    @apply text-yellow-500 text-2xl
+}
+
+body {
+    font-family: "Rancho", cursive;
+}
